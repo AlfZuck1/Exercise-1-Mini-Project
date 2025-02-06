@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService implements IUserService{
@@ -28,8 +29,11 @@ public class UserService implements IUserService{
     }
 
     @Override
-    public void deleteUserByUsername(String username) {
-        userRepository.deleteByUsername(username);
+    public void deleteUserById(Integer id) {
+        Optional<User> user = userRepository.findById(id);
+        if (user.isPresent()) {
+            userRepository.deleteById(id);
+        }
     }
 
     @Override
