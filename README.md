@@ -1,4 +1,4 @@
-# Exercise-1-Mini-Project
+# ༼ つ ◕_◕ ༽つ Exercise-1-Mini-Project 
 Develop a small application or script in your favorite language with specific requirements.
 
 ## **Objective**
@@ -43,3 +43,47 @@ Once the Image is contained in Docker, I made some tests with Postman to ensure 
 <img src="https://github.com/user-attachments/assets/30ab765a-2338-4f13-a3d8-32966a82e4a2" width="500"/>
 <img src="https://github.com/user-attachments/assets/982ce082-d681-4a2b-a414-7e75479cfd99" width="500"/>
 <img src="https://github.com/user-attachments/assets/4d67eda0-4064-4f19-91c4-05d7aa05641e" width="500"/>
+
+## **How to Run the Project**
+## **Prerequisites**
+- Install **Docker** on your machine.
+- Install **Node.js** and **Angular CLI** if you haven't already.
+
+### **1. Clone the Repository**
+```sh
+git clone https://github.com/AlfZuck1/Exercise-1-Mini-Project.git
+cd Exercise-1-Mini-Project
+```
+
+### **2. Run the Backend (Spring Boot API + Database)**
+- Execute the following command in the root directory:
+  ```sh
+  docker-compose up -d
+  ```
+- This will:
+  - Download the API image from Docker Hub.
+  - Set up the database.
+  - Run both inside specific containers.
+- Wait for the API and database to fully start.
+
+### **3. Run the Angular Application**
+- Navigate to the Angular project folder:
+  ```sh
+  cd user-manager-app
+  ```
+- Install dependencies:
+  ```sh
+  npm install
+  ```
+- Start the development server:
+  ```sh
+  ng serve
+  ```
+- Open the application in your browser at:
+  ```
+  http://localhost:4200
+  ```
+
+🚀🚀🚀 Now your project should be up and running! 🚀🚀🚀
+
+
