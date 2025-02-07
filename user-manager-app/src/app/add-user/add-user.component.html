@@ -26,5 +26,8 @@
             class="btn btn-primary me-3">Submit</button>
             <a href="/" class="btn btn-primary btn-danger">Go Back</a>
         </div>
-      </form>
+      <div *ngIf="errorMessage" class="text-center error-message me-3">
+          <p>{{errorMessage}}</p> 
+      </div>
+    </form>
 </div>

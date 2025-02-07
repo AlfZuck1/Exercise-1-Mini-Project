@@ -12,6 +12,7 @@ import { error } from 'console';
 })
 export class UserListComponent {
   users: User[];
+  errorMessage: string= '';
 
   constructor(private userService: UserService,
     private router: Router){}
@@ -22,9 +23,10 @@ export class UserListComponent {
 
   private getUsers(){
     this.userService.getUsersList().subscribe(
-      (data => {
-        this.users = data;
-      })
+      {
+      next: (data) => this.users = data,
+      error: (error) => this.errorMessage = error.message
+      }
     );
   }
 
@@ -36,7 +38,7 @@ export class UserListComponent {
     this.userService.deleteUser(id).subscribe(
       {
         next: (data) => this.getUsers(),
-        error: (error) => console.log(error)
+        error: (error) => this.errorMessage = error.message
       }
     );
   }

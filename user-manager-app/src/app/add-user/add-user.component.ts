@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AddUserComponent {
   user: User = new User();
+  errorMessage: string= '';
 
   constructor(private userService: UserService,
     private router: Router){}
@@ -25,7 +26,7 @@ export class AddUserComponent {
         next: (datos) => {
           this.goHome();
         },
-        error: (error: any) => {console.log(error)} 
+        error: (error) => {this.errorMessage = error.message} 
       }
     );
   }

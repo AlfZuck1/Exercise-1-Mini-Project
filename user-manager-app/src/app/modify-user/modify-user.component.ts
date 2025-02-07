@@ -13,6 +13,7 @@ export class ModifyUserComponent {
   user: User = new User();
   username: string;
   id: number;
+  errorMessage: string= '';
 
   constructor(private userService: UserService,
     private route: ActivatedRoute,
@@ -25,7 +26,7 @@ export class ModifyUserComponent {
         next: (data) => {this.user = data,
           this.id = this.user.id
         },
-        error:(error: any) => console.log(error)
+        error:(error) => this.errorMessage = error.message
       }
     );
   }
@@ -37,7 +38,7 @@ export class ModifyUserComponent {
     this.userService.modifyUser(this.id, this.user).subscribe(
       {
         next: (data) => this.goHome(),
-        error: (error) => console.log(error)
+        error: (error) => this.errorMessage = error.message
       }
     );
   }
