@@ -20,7 +20,21 @@ Secondly, I made a dockerization of my application and the database.
    - Created a **Docker image** for the REST API.
    - Used **Docker Compose** to connect the API to a database container for testing and running the API in isolated environments.
    - Used **wait-for-it.sh** script to ensure that the API connects to the database once it is available.
+  
+3. **FrontEnd**
+   - Developed an Angular Application to interact with the API and display user information.
+   - This app allows to create, view, update and delete users directly  from the interface.
 
+<h2>FrontEnd</h2>
+The home page shows a list of all users registered in the database. Also, this pages includes a navigation bar to add a new user. In the table you can find the options to modify and delete any user shown.
+
+![image](https://github.com/user-attachments/assets/debeb387-6ac8-4c83-befa-184d488fb74f)
+
+In the Add user or modify user page you can write the username, email and age of the user. Once this information is submitted, you are redirected to the main page.
+![image](https://github.com/user-attachments/assets/2d3f9ed3-d2a7-4eae-95ee-38963d8eca59)
+![image](https://github.com/user-attachments/assets/1834f12b-0699-488b-940d-fd6b26bb724b)
+
+Finally, by just clicking the delete button, the user is deleted.
 <h2>Tests</h2>
 Once the Image is contained in Docker, I made some tests with Postman to ensure that the operations implemented worked fine.
 
