@@ -14,8 +14,8 @@ services:
       - db_data:/var/lib/mysql
 
   api:
-    image: mi-api
-    container_name: mi-api
+    image: alfzuck1/exercise1:v1
+    container_name: exercise1_api
     restart: always
     depends_on:
       - database
