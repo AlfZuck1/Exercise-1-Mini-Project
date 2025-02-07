@@ -1,0 +1,10 @@
+table {
+    width: 100%;
+    table-layout: auto;
+  }
+  
+  th, td {
+    padding: 4px 8px;
+    white-space: nowrap;
+    text-align: left;
+  }
