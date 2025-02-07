@@ -34,7 +34,16 @@ In the Add user or modify user page you can write the username, email and age of
 ![image](https://github.com/user-attachments/assets/2d3f9ed3-d2a7-4eae-95ee-38963d8eca59)
 ![image](https://github.com/user-attachments/assets/1834f12b-0699-488b-940d-fd6b26bb724b)
 
-Finally, by just clicking the delete button, the user is deleted.
+By just clicking the delete button, the user is deleted.
+
+## Exceptions
+Additionally, if an exception occurs in the backend, such as a duplicate username, it will be displayed in the frontend on both the 'Add User' and 'Modify User' pages.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/96818022-d602-4382-977d-347eb9d44bb4" height="400"/>
+<img src="https://github.com/user-attachments/assets/8a0cd255-11d8-4938-8a3a-dc01808c36a6" height="400"/>
+</p>
+
 <h2>Tests</h2>
 Once the Image is contained in Docker, I made some tests with Postman to ensure that the operations implemented worked fine.
 
