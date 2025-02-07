@@ -24,7 +24,6 @@ export class UserService {
 
   modifyUser(id: number, user: User): Observable<Object>{
     return this.httpClient.put(`${this.urlBase}/${id}`, user);
-
   }
 
   deleteUser(id: number): Observable<Object>{

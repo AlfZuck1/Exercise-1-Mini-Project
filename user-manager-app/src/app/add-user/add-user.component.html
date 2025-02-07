@@ -1,9 +1,11 @@
 <div class="container">
-    <div class="container text-center" style="margin: 30px">
-        <h3>Add User</h3>
-    </div>
+  <div class="title-container">
+    <img src="assets/Pluma.png" alt="Imagen" class="left-image">
+    <h1>Add User</h1>
+    <img src="assets/Pluma.png" alt="Imagen" class="right-image mirror-horizontal">
+  </div>
 
-    <form (ngSubmit) = "onSubmit()">
+    <form (ngSubmit) = "onSubmit()" class="form-container">
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
           <input type="text" class="form-control" id="username"
